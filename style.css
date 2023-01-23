@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Special Elite', cursive;
+}
+
+header {
+    background: linear-gradient(#d69edb, #7d8fc9, #7a4ad3);
+    color: white;
+    text-shadow: 5px 5px #07000c;
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container {
+    position: sticky;
+    width: 90vh;
+    height: 100vh;
+    max-width: 550px;
+    max-height: 800px;
+    background-image: url("bg-triangle.svg");
+    background-position: bottom 30% right 50%;
+    background-repeat: no-repeat;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
+}
+
+.score-board {
+    border: 3px solid black;
+    width: 200px;
+    margin: 20px auto;
+    font-size: 40px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 15px 20px;
+    position: relative;
+}
+
+.badge {
+    background: linear-gradient(#d69edb, #7d8fc9);
+    color: white;
+    font-size: 14px;
+    padding: 2px 10px;
+}
+
+#user-label {
+    position: absolute;
+    top: 30px;
+    left: -20px;
+}
+
+#computer-label {
+    position: absolute;
+    top: 30px;
+    right: -30px;
+}
+
+.result {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+h3 {
+    position: absolute;
+    bottom: 40%;
+    right: 40%;
+    font-size: 25px;
+    text-align: center;
+}
+
+img {
+    max-height: 200px;
+    width: 200px;
+}
+
+@keyframes bounce {
+
+    0%,
+    100%,
+    20%,
+    50%,
+    80% {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0)
+    }
+
+    40% {
+        -webkit-transform: translateY(-30px);
+        -ms-transform: translateY(-30px);
+        transform: translateY(-30px)
+    }
+
+    60% {
+        -webkit-transform: translateY(-15px);
+        -ms-transform: translateY(-15px);
+        transform: translateY(-15px)
+    }
+}
+
+#rock {
+    float: none;
+    position: absolute;
+    bottom: 15%;
+    right: 38%;
+    transform: rotate(15deg);
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+
+#rock:hover {
+    cursor: pointer;
+    animation-name: bounce;
+    -moz-animation-name: bounce;
+    transform: rotate(15deg);
+}
+
+#rock:choice {
+    color: #aaa;
+    transform: rotate(15deg);
+}
+
+#scissor {
+    float: none;
+    position: absolute;
+    left: 10%;
+    top: 39%;
+    transform: rotate(25deg);
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+
+#scissor:hover {
+    cursor: pointer;
+    animation-name: bounce;
+    -moz-animation-name: bounce;
+    transform: rotate(25deg);
+}
+
+#scissor:choice {
+    color: #aaa;
+    transform: rotate(25deg);
+}
+
+#paper {
+    float: none;
+    position: absolute;
+    top: 39%;
+    right: 5%;
+    transform: rotate(-40deg);
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+
+#paper:hover {
+    cursor: pointer;
+    animation-name: bounce;
+    -moz-animation-name: bounce;
+}
+
+#paper:choice {
+    color: #aaa;
+}
+
+
+@media (max-width: 600px) {
+    #rock {
+        bottom: 12%;
+        right: 30%;
+    }
+
+    #scissor {
+        left: -5%;
+        top: 39%;
+        transform: rotate(0deg);
+    }
+
+    #paper {
+        top: 37%;
+        right: -5%;
+        transform: rotate(-15deg);
+    }
+
+    header {
+        font-size: 20px;
+    }
+    .game-container {
+        background-image: none
+    }
+
+    .result {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 20px;
+        bottom: 40%;
+        right: 40%;
+    }
+}

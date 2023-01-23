@@ -2,87 +2,52 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="/src/styles.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <title>Rock, Paper, Scissors</title>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor Game</title>
+    <!-- font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&family=Gochi+Hand&family=Special+Elite&display=swap" rel="stylesheet">
+    <!-- style sheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- Display score of player and computer -->
-  <header class="scoreboard">
-    <h3>Rock</h3>
-    <h3>Paper</h3>
-    <h3>Scissors</h3>
-    <div class="score">
-      <div class="playerScore">
-        <h2>Player</h2>
-        <p class="p-count count">0</p>
+    <div class="game-container">
+        <header>
+            <h1>Rock Paper Scissors</h1>
+        </header>
 
-      </div>
-      <div class="computerScore">
-        <h2>Computer</h2>
-        <p class="c-count count">0</p>
+        <div class="score-board">
+            <div id="user-label" class="badge">You</div>
+            <div id="computer-label" class="badge">Comp</div>
+            <span id="user-score">0</span>:<span id="computer-score">0</span>
+        </div>
 
-      </div>
-    </div>
-    </div>
-  </header>
+        <div class="result">
+            <p>Paper covers rock. You win!</p>
+        </div>
 
-  <!-- The Game -->
-  <section class="game">
-    <div class="move">Choose your move</div>
+        <div class="choices">
+            <h3 class="action">Make your <br> move</h3>
+            <div class="choice" id="rock">
+                <img src="2rockk.png" alt="choose rock" text="rock">
+            </div>
+            <div class="choice" id="paper">
+                <img src="2Paperr.png" alt="choose paper" text="paper">
+            </div>
+            <div class="choice" id="scissor">
+                <img src="2Scissorr.png" alt="choose paper" text="scissor">
+            </div>
 
-    <button class="choice" id="rock">Rock</button>
-    <button class="choice" id="paper">Paper</button>
-    <button class="choice" id="scissors">Scissors</button>
-  </section>
+            
+        </div>
 
-  <!-- game results -->
-  <div id="user-choice">You Picked</div>
-  <div id="house-choice">The house picked</div>
-  <h2> Result <span id="result"></span></h2>
-  <div id="winner">You Win</div>
-  <div id="loser">You Lose</div>
-  <button id="resetBtn">Play again</button>
-  <button id="rulesBtn">Game Rules</button>
-
-  <!-- Modal Stuff -->
-
-  <!-- Trigger/Open The Modal -->
-  <button id="myBtn">Open Modal</button>
-
-  <!-- The Modal -->
-  <div id="myModal" class="modal">
-
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <p>Some text in the Modal..</p>
-      <img class="rulesimg" src="/images/image-rules.svg" alt="Game Rules">
-
-    </div>
-
-  </div>
-
-
-  <!-- random frontend mentor stuff -->
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor </a>.
-    Coded by <a href="#"> Katia Barroso </a>.
-  </div>
-
-  <script src="/src/script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
+        <!-- Script -->
+        <script src="script.js"></script>
 </body>
 
 </html>
